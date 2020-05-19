@@ -796,16 +796,16 @@
 <div class="sourceCode" id="cb3"><pre class="r"><span class="no">ecdc</span> <span class="kw">=</span> <span class="fu"><a href="reference/ecdc_data.html">ecdc_data</a></span>()</pre></div>
 <p>Get a quick overview of the dataset.</p>
 <div class="sourceCode" id="cb4"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">ecdc</span>)</pre></div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">## # A tibble: 6 x 8</a>
-<a class="sourceLine" id="cb5-2" data-line-number="2">## # Groups:   location_name [1]</a>
-<a class="sourceLine" id="cb5-3" data-line-number="3">##   date       location_name iso2c iso3c population_2018 continent subset    count</a>
-<a class="sourceLine" id="cb5-4" data-line-number="4">##   &lt;date&gt;     &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;           &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;     &lt;dbl&gt;</a>
-<a class="sourceLine" id="cb5-5" data-line-number="5">## 1 2019-12-31 Afghanistan   AF    AFG          37172386 Asia      deaths        0</a>
-<a class="sourceLine" id="cb5-6" data-line-number="6">## 2 2019-12-31 Afghanistan   AF    AFG          37172386 Asia      confirmed     0</a>
-<a class="sourceLine" id="cb5-7" data-line-number="7">## 3 2020-01-01 Afghanistan   AF    AFG          37172386 Asia      deaths        0</a>
-<a class="sourceLine" id="cb5-8" data-line-number="8">## 4 2020-01-01 Afghanistan   AF    AFG          37172386 Asia      confirmed     0</a>
-<a class="sourceLine" id="cb5-9" data-line-number="9">## 5 2020-01-02 Afghanistan   AF    AFG          37172386 Asia      deaths        0</a>
-<a class="sourceLine" id="cb5-10" data-line-number="10">## 6 2020-01-02 Afghanistan   AF    AFG          37172386 Asia      confirmed     0</a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="co">## # A tibble: 6 x 8</span></a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="co">## # Groups:   location_name [1]</span></a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="co">##   date       location_name iso2c iso3c population_2018 continent subset    count</span></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="co">##   &lt;date&gt;     &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;           &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;     &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="co">## 1 2019-12-31 Afghanistan   AF    AFG          37172386 Asia      deaths        0</span></a>
+<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="co">## 2 2019-12-31 Afghanistan   AF    AFG          37172386 Asia      confirmed     0</span></a>
+<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="co">## 3 2020-01-01 Afghanistan   AF    AFG          37172386 Asia      deaths        0</span></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="co">## 4 2020-01-01 Afghanistan   AF    AFG          37172386 Asia      confirmed     0</span></a>
+<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="co">## 5 2020-01-02 Afghanistan   AF    AFG          37172386 Asia      deaths        0</span></a>
+<a class="sourceLine" id="cb5-10" data-line-number="10"><span class="co">## 6 2020-01-02 Afghanistan   AF    AFG          37172386 Asia      confirmed     0</span></a></code></pre></div>
 <p>The <code>ecdc</code> dataset is just a <code>data.frame</code> (actually, a <code>tibble</code>), so applying standard R or tidyverse functionality can get answers to basic questions with little code. The next code block generates a <code>top10</code> of countries with the most deaths recorded to date. Note that if you do this on your own computer, the data will be updated to today’s data values.</p>
 <div class="sourceCode" id="cb6"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">dplyr</span>)
 <span class="no">top10</span> <span class="kw">=</span> <span class="no">ecdc</span> <span class="kw">%&gt;%</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="no">subset</span><span class="kw">==</span><span class="st">'deaths'</span>) <span class="kw">%&gt;%</span>

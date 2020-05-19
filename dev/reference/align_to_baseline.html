@@ -247,26 +247,26 @@ direct comparison of the shapes of the countries' curves.</p>
 
 <span class='co'># use European CDC dataset</span>
 <span class='no'>ecdc</span> <span class='kw'>=</span> <span class='fu'><a href='ecdc_data.html'>ecdc_data</a></span>()
-<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>ecdc</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 6 x 8</span><span>
-#&gt; </span><span style='color: #555555;'># Groups:   location_name [1]</span><span>
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>ecdc</span>)</div><div class='output co'>#&gt; # A tibble: 6 x 8
+#&gt; # Groups:   location_name [1]
 #&gt;   date       location_name iso2c iso3c population_2018 continent subset    count
-#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>           </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> 2019-12-31 Afghanistan   AF    AFG          37</span><span style='text-decoration: underline;'>172</span><span>386 Asia      deaths        0
-#&gt; </span><span style='color: #555555;'>2</span><span> 2019-12-31 Afghanistan   AF    AFG          37</span><span style='text-decoration: underline;'>172</span><span>386 Asia      confirmed     0
-#&gt; </span><span style='color: #555555;'>3</span><span> 2020-01-01 Afghanistan   AF    AFG          37</span><span style='text-decoration: underline;'>172</span><span>386 Asia      deaths        0
-#&gt; </span><span style='color: #555555;'>4</span><span> 2020-01-01 Afghanistan   AF    AFG          37</span><span style='text-decoration: underline;'>172</span><span>386 Asia      confirmed     0
-#&gt; </span><span style='color: #555555;'>5</span><span> 2020-01-02 Afghanistan   AF    AFG          37</span><span style='text-decoration: underline;'>172</span><span>386 Asia      deaths        0
-#&gt; </span><span style='color: #555555;'>6</span><span> 2020-01-02 Afghanistan   AF    AFG          37</span><span style='text-decoration: underline;'>172</span><span>386 Asia      confirmed     0</div><div class='input'><span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/reexports.html'>glimpse</a></span>(<span class='no'>ecdc</span>)</div><div class='output co'>#&gt; Rows: 35,570
+#&gt;   &lt;date&gt;     &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;           &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;     &lt;dbl&gt;
+#&gt; 1 2019-12-31 Afghanistan   AF    AFG          37172386 Asia      deaths        0
+#&gt; 2 2019-12-31 Afghanistan   AF    AFG          37172386 Asia      confirmed     0
+#&gt; 3 2020-01-01 Afghanistan   AF    AFG          37172386 Asia      deaths        0
+#&gt; 4 2020-01-01 Afghanistan   AF    AFG          37172386 Asia      confirmed     0
+#&gt; 5 2020-01-02 Afghanistan   AF    AFG          37172386 Asia      deaths        0
+#&gt; 6 2020-01-02 Afghanistan   AF    AFG          37172386 Asia      confirmed     0</div><div class='input'><span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/reexports.html'>glimpse</a></span>(<span class='no'>ecdc</span>)</div><div class='output co'>#&gt; Rows: 35,570
 #&gt; Columns: 8
 #&gt; Groups: location_name [210]
-#&gt; $ date            </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span> 2019-12-31, 2019-12-31, 2020-01-01, 2020-01-01, 2020…
-#&gt; $ location_name   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> "Afghanistan", "Afghanistan", "Afghanistan", "Afghani…
-#&gt; $ iso2c           </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> "AF", "AF", "AF", "AF", "AF", "AF", "AF", "AF", "AF",…
-#&gt; $ iso3c           </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> "AFG", "AFG", "AFG", "AFG", "AFG", "AFG", "AFG", "AFG…
-#&gt; $ population_2018 </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> 37172386, 37172386, 37172386, 37172386, 37172386, 371…
-#&gt; $ continent       </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> "Asia", "Asia", "Asia", "Asia", "Asia", "Asia", "Asia…
-#&gt; $ subset          </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> "deaths", "confirmed", "deaths", "confirmed", "deaths…
-#&gt; $ count           </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…</div><div class='input'>
+#&gt; $ date            &lt;date&gt; 2019-12-31, 2019-12-31, 2020-01-01, 2020-01-01, 2020…
+#&gt; $ location_name   &lt;chr&gt; "Afghanistan", "Afghanistan", "Afghanistan", "Afghani…
+#&gt; $ iso2c           &lt;chr&gt; "AF", "AF", "AF", "AF", "AF", "AF", "AF", "AF", "AF",…
+#&gt; $ iso3c           &lt;chr&gt; "AFG", "AFG", "AFG", "AFG", "AFG", "AFG", "AFG", "AFG…
+#&gt; $ population_2018 &lt;dbl&gt; 37172386, 37172386, 37172386, 37172386, 37172386, 371…
+#&gt; $ continent       &lt;chr&gt; "Asia", "Asia", "Asia", "Asia", "Asia", "Asia", "Asia…
+#&gt; $ subset          &lt;chr&gt; "deaths", "confirmed", "deaths", "confirmed", "deaths…
+#&gt; $ count           &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…</div><div class='input'>
 <span class='co'># get top 10 countries by cumulative</span>
 <span class='co'># number of deaths</span>
 <span class='no'>top_10</span> <span class='kw'>=</span> <span class='no'>ecdc</span> <span class='kw'>%&gt;%</span>
@@ -276,19 +276,19 @@ direct comparison of the shapes of the countries' curves.</p>
     <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/arrange.html'>arrange</a></span>(<span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/desc.html'>desc</a></span>(<span class='no'>count</span>)) <span class='kw'>%&gt;%</span>
     <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='fl'>10</span>)
 
-<span class='no'>top_10</span></div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 10 x 2</span><span>
+<span class='no'>top_10</span></div><div class='output co'>#&gt; # A tibble: 10 x 2
 #&gt;    location_name            count
-#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'> 1</span><span> United_States_of_America </span><span style='text-decoration: underline;'>89</span><span>562
-#&gt; </span><span style='color: #555555;'> 2</span><span> United_Kingdom           </span><span style='text-decoration: underline;'>34</span><span>636
-#&gt; </span><span style='color: #555555;'> 3</span><span> Italy                    </span><span style='text-decoration: underline;'>31</span><span>908
-#&gt; </span><span style='color: #555555;'> 4</span><span> France                   </span><span style='text-decoration: underline;'>28</span><span>108
-#&gt; </span><span style='color: #555555;'> 5</span><span> Spain                    </span><span style='text-decoration: underline;'>27</span><span>650
-#&gt; </span><span style='color: #555555;'> 6</span><span> Brazil                   </span><span style='text-decoration: underline;'>16</span><span>118
-#&gt; </span><span style='color: #555555;'> 7</span><span> Belgium                   </span><span style='text-decoration: underline;'>9</span><span>052
-#&gt; </span><span style='color: #555555;'> 8</span><span> Germany                   </span><span style='text-decoration: underline;'>7</span><span>935
-#&gt; </span><span style='color: #555555;'> 9</span><span> Iran                      </span><span style='text-decoration: underline;'>6</span><span>988
-#&gt; </span><span style='color: #555555;'>10</span><span> Canada                    </span><span style='text-decoration: underline;'>5</span><span>782</div><div class='input'>
+#&gt;    &lt;chr&gt;                    &lt;dbl&gt;
+#&gt;  1 United_States_of_America 89562
+#&gt;  2 United_Kingdom           34636
+#&gt;  3 Italy                    31908
+#&gt;  4 France                   28108
+#&gt;  5 Spain                    27650
+#&gt;  6 Brazil                   16118
+#&gt;  7 Belgium                   9052
+#&gt;  8 Germany                   7935
+#&gt;  9 Iran                      6988
+#&gt; 10 Canada                    5782</div><div class='input'>
 <span class='co'># limit ecdc data to "deaths" and</span>
 <span class='co'># top 10 countries</span>
 
@@ -299,7 +299,7 @@ direct comparison of the shapes of the countries' curves.</p>
 
 <span class='fu'><a href='plot_epicurve.html'>plot_epicurve</a></span>(<span class='no'>ecdc_top10_baseline</span>, <span class='kw'>date_column</span><span class='kw'>=</span><span class='st'>'index'</span>, <span class='kw'>color</span><span class='kw'>=</span><span class='st'>'location_name'</span>) +
     <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>ggtitle</a></span>(<span class='st'>'Deaths over time, aligned to date of 100 deaths per country'</span>)</div><div class='img'><img src='align_to_baseline-2.png' alt='' width='700' height='433' /></div><div class='input'>
-</div></span></pre>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

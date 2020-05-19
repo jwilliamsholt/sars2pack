@@ -266,8 +266,8 @@ examples for details.</p>
 #&gt;  [87] "Malaysia"                      "Maranhao"                     
 #&gt;  [89] "Marche"                        "Maryland"                     
 #&gt;  [91] "Massachusetts"                 "Mecklenburg-Vorpommern"       
-#&gt;  [93] "Melilla"                       "Mexico"                       
-#&gt;  [95] "Mexico City"                   "Michigan"                     
+#&gt;  [93] "Mexico"                        "Mexico City"                  
+#&gt;  [95] "Mexico_country"                "Michigan"                     
 #&gt;  [97] "Minnesota"                     "Mississippi"                  
 #&gt;  [99] "Missouri"                      "Molise"                       
 #&gt; [101] "Montana"                       "Murcia"                       
@@ -296,18 +296,18 @@ examples for details.</p>
 #&gt; [147] "Sicilia"                       "Sinaloa"                      
 #&gt; [149] "Slovakia"                      "Slovenia"                     
 #&gt; [151] "South Carolina"                "South Dakota"                 
-#&gt; [153] "Spain"                         "State of Mexico"              
-#&gt; [155] "Sweden"                        "Switzerland"                  
-#&gt; [157] "Tabasco"                       "Tennessee"                    
-#&gt; [159] "Texas"                         "Thuringia"                    
-#&gt; [161] "Toscana"                       "Turkey"                       
-#&gt; [163] "Ukraine"                       "Umbria"                       
-#&gt; [165] "United Kingdom"                "United States of America"     
-#&gt; [167] "Utah"                          "Valencian Community"          
-#&gt; [169] "Valle d'Aosta"                 "Veneto"                       
-#&gt; [171] "Vermont"                       "Virginia"                     
-#&gt; [173] "Washington"                    "West Virginia"                
-#&gt; [175] "Wisconsin"                     "Wyoming"                      </div><div class='input'>
+#&gt; [153] "Spain"                         "Sweden"                       
+#&gt; [155] "Switzerland"                   "Tabasco"                      
+#&gt; [157] "Tennessee"                     "Texas"                        
+#&gt; [159] "Thuringia"                     "Toscana"                      
+#&gt; [161] "Turkey"                        "Ukraine"                      
+#&gt; [163] "Umbria"                        "United Kingdom"               
+#&gt; [165] "United States of America"      "Utah"                         
+#&gt; [167] "Valencian Community"           "Valle d'Aosta"                
+#&gt; [169] "Veneto"                        "Vermont"                      
+#&gt; [171] "Virginia"                      "Washington"                   
+#&gt; [173] "West Virginia"                 "Wisconsin"                    
+#&gt; [175] "Wyoming"                      </div><div class='input'>
 <span class='co'># create a ggplot2 object</span>
 <span class='no'>nyp</span> <span class='kw'>=</span> <span class='fu'>plot_projection</span>(<span class='kw'>projections</span> <span class='kw'>=</span> <span class='no'>hdp</span>,
     <span class='kw'>location_name</span><span class='kw'>=</span><span class='st'>'New York'</span>)
@@ -333,10 +333,8 @@ examples for details.</p>
 <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>spain_proj</span>)</div><div class='img'><img src='plot_projection-4.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>portugal_proj</span>)</div><div class='img'><img src='plot_projection-5.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># plot both on same plot</span>
 <span class='kw'>if</span>(<span class='fu'><a href='https://rdrr.io/r/base/library.html'>require</a></span>(<span class='no'>cowplot</span>)) {
-  <span class='fu'><a href='https://rdrr.io/pkg/cowplot/man/plot_grid.html'>plot_grid</a></span>(<span class='no'>spain_proj</span>, <span class='no'>portugal_proj</span>)
-}</div><div class='output co'>#&gt; <span class='message'>Loading required package: cowplot</span></div><div class='output co'>#&gt; <span class='message'></span>
-#&gt; <span class='message'>********************************************************</span></div><div class='output co'>#&gt; <span class='message'>Note: As of version 1.0.0, cowplot does not change the</span></div><div class='output co'>#&gt; <span class='message'>  default ggplot2 theme anymore. To recover the previous</span></div><div class='output co'>#&gt; <span class='message'>  behavior, execute:</span>
-#&gt; <span class='message'>  theme_set(theme_cowplot())</span></div><div class='output co'>#&gt; <span class='message'>********************************************************</span></div><div class='img'><img src='plot_projection-6.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'>plot_grid</span>(<span class='no'>spain_proj</span>, <span class='no'>portugal_proj</span>)
+}</div><div class='output co'>#&gt; <span class='message'>Loading required package: cowplot</span></div><div class='output co'>#&gt; <span class='warning'>Warning: there is no package called ‘cowplot’</span></div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
