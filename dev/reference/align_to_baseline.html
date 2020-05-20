@@ -256,7 +256,7 @@ direct comparison of the shapes of the countries' curves.</p>
 #&gt; 3 2020-01-01 Afghanistan   AF    AFG          37172386 Asia      deaths        0
 #&gt; 4 2020-01-01 Afghanistan   AF    AFG          37172386 Asia      confirmed     0
 #&gt; 5 2020-01-02 Afghanistan   AF    AFG          37172386 Asia      deaths        0
-#&gt; 6 2020-01-02 Afghanistan   AF    AFG          37172386 Asia      confirmed     0</div><div class='input'><span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/reexports.html'>glimpse</a></span>(<span class='no'>ecdc</span>)</div><div class='output co'>#&gt; Rows: 35,570
+#&gt; 6 2020-01-02 Afghanistan   AF    AFG          37172386 Asia      confirmed     0</div><div class='input'><span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/reexports.html'>glimpse</a></span>(<span class='no'>ecdc</span>)</div><div class='output co'>#&gt; Rows: 35,988
 #&gt; Columns: 8
 #&gt; Groups: location_name [210]
 #&gt; $ date            &lt;date&gt; 2019-12-31, 2019-12-31, 2020-01-01, 2020-01-01, 2020…
@@ -279,16 +279,16 @@ direct comparison of the shapes of the countries' curves.</p>
 <span class='no'>top_10</span></div><div class='output co'>#&gt; # A tibble: 10 x 2
 #&gt;    location_name            count
 #&gt;    &lt;chr&gt;                    &lt;dbl&gt;
-#&gt;  1 United_States_of_America 89562
-#&gt;  2 United_Kingdom           34636
-#&gt;  3 Italy                    31908
-#&gt;  4 France                   28108
-#&gt;  5 Spain                    27650
-#&gt;  6 Brazil                   16118
-#&gt;  7 Belgium                   9052
-#&gt;  8 Germany                   7935
-#&gt;  9 Iran                      6988
-#&gt; 10 Canada                    5782</div><div class='input'>
+#&gt;  1 United_States_of_America 90353
+#&gt;  2 United_Kingdom           34796
+#&gt;  3 Italy                    32007
+#&gt;  4 France                   28239
+#&gt;  5 Spain                    27709
+#&gt;  6 Brazil                   16792
+#&gt;  7 Belgium                   9080
+#&gt;  8 Germany                   8007
+#&gt;  9 Iran                      7057
+#&gt; 10 Canada                    5842</div><div class='input'>
 <span class='co'># limit ecdc data to "deaths" and</span>
 <span class='co'># top 10 countries</span>
 

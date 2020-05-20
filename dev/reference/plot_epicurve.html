@@ -271,12 +271,12 @@ curves on the same plot. See examples.</p>
 <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>cc</span>)</div><div class='output co'>#&gt; # A tibble: 6 x 10
 #&gt;   date       state positive negative pending hospitalized death
 #&gt;   &lt;date&gt;     &lt;chr&gt;    &lt;int&gt;    &lt;int&gt;   &lt;int&gt;        &lt;int&gt; &lt;int&gt;
-#&gt; 1 2020-05-18 AK         399    35212      NA           NA    10
-#&gt; 2 2020-05-18 AL       12086   145037      NA         1416   489
-#&gt; 3 2020-05-18 AR        4813    80426      NA          530   100
-#&gt; 4 2020-05-18 AS           0      105      NA           NA     0
-#&gt; 5 2020-05-18 AZ       14170   142303      NA         1717   686
-#&gt; 6 2020-05-18 CA       80430  1212242      NA           NA  3302
+#&gt; 1 2020-05-19 AK         399    35981      NA           NA    10
+#&gt; 2 2020-05-19 AL       12376   145190      NA         1453   504
+#&gt; 3 2020-05-19 AR        4923    88778      NA          535   102
+#&gt; 4 2020-05-19 AS           0      124      NA           NA     0
+#&gt; 5 2020-05-19 AZ       14566   147005      NA         1746   704
+#&gt; 6 2020-05-19 CA       81795  1257521      NA           NA  3334
 #&gt; # … with 3 more variables: dateChecked &lt;dttm&gt;, fips &lt;chr&gt;, total_tests &lt;int&gt;</div><div class='input'>
 <span class='fu'>plot_epicurve</span>(<span class='no'>cc</span>, <span class='kw'>case_column</span><span class='kw'>=</span><span class='st'>'total_tests'</span>, <span class='kw'>color</span><span class='kw'>=</span><span class='st'>'state'</span>, <span class='kw'>log</span><span class='kw'>=</span><span class='fl'>FALSE</span>) +
     <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>ggtitle</a></span>(<span class='st'>'Total tests by state'</span>) +

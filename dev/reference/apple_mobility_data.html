@@ -254,17 +254,19 @@ See <a href='https://www.apple.com/covid19/mobility'>https://www.apple.com/covid
     <pre class="examples"><div class='input'>
 <span class='no'>res</span> <span class='kw'>=</span> <span class='fu'>apple_mobility_data</span>()
 <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span>(<span class='no'>res</span>)</div><div class='output co'>#&gt; [1] "geo_type"            "region"              "transportation_type"
-#&gt; [4] "alternative_name"    "date"                "mobility_index"     </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>res</span>)</div><div class='output co'>#&gt; # A tibble: 6 x 6
-#&gt;   geo_type   region  transportation_… alternative_name date       mobility_index
-#&gt;   &lt;chr&gt;      &lt;chr&gt;   &lt;chr&gt;            &lt;chr&gt;            &lt;date&gt;              &lt;dbl&gt;
-#&gt; 1 country/r… Albania driving          &lt;NA&gt;             2020-01-13          100  
-#&gt; 2 country/r… Albania driving          &lt;NA&gt;             2020-01-14           95.3
-#&gt; 3 country/r… Albania driving          &lt;NA&gt;             2020-01-15          101. 
-#&gt; 4 country/r… Albania driving          &lt;NA&gt;             2020-01-16           97.2
-#&gt; 5 country/r… Albania driving          &lt;NA&gt;             2020-01-17          104. 
-#&gt; 6 country/r… Albania driving          &lt;NA&gt;             2020-01-18          113. </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span>(<span class='no'>res</span>$<span class='no'>transportation_type</span>)</div><div class='output co'>#&gt; 
+#&gt; [4] "alternative_name"    "sub-region"          "country"            
+#&gt; [7] "date"                "mobility_index"     </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>res</span>)</div><div class='output co'>#&gt; # A tibble: 6 x 8
+#&gt;   geo_type region transportation_… alternative_name `sub-region` country
+#&gt;   &lt;chr&gt;    &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt;            &lt;chr&gt;        &lt;chr&gt;  
+#&gt; 1 country… Alban… driving          &lt;NA&gt;             &lt;NA&gt;         &lt;NA&gt;   
+#&gt; 2 country… Alban… driving          &lt;NA&gt;             &lt;NA&gt;         &lt;NA&gt;   
+#&gt; 3 country… Alban… driving          &lt;NA&gt;             &lt;NA&gt;         &lt;NA&gt;   
+#&gt; 4 country… Alban… driving          &lt;NA&gt;             &lt;NA&gt;         &lt;NA&gt;   
+#&gt; 5 country… Alban… driving          &lt;NA&gt;             &lt;NA&gt;         &lt;NA&gt;   
+#&gt; 6 country… Alban… driving          &lt;NA&gt;             &lt;NA&gt;         &lt;NA&gt;   
+#&gt; # … with 2 more variables: date &lt;date&gt;, mobility_index &lt;dbl&gt;</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span>(<span class='no'>res</span>$<span class='no'>transportation_type</span>)</div><div class='output co'>#&gt; 
 #&gt; driving transit walking 
-#&gt;  100674   18774   26460 </div><div class='input'>
+#&gt;  387096   28194   45085 </div><div class='input'>
 <span class='fu'><a href='https://rdrr.io/r/base/library.html'>require</a></span>(<span class='no'>ggplot2</span>)
 
 <span class='no'>pl</span> <span class='kw'>=</span> <span class='no'>res</span> <span class='kw'>%&gt;%</span>
